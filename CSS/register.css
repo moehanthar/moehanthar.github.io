@@ -1,0 +1,15 @@
+#mybody{
+    background-color:rgb(75, 186, 242);
+}
+.heading{
+text-align: center;
+color:red;
+}
+#myform{
+    width:40%;
+    margin:auto;
+}
+input[type=text]{
+    width:100%;
+    height: 40px;
+}
