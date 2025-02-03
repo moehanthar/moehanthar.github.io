@@ -1,0 +1,45 @@
+
+/* global attribute */
+/* *{
+    color:red;
+    font-size:20px;
+} */
+
+/*  */
+h1{
+    color:red;
+    align: center;
+
+}
+
+/* attribute selector */
+a[title="google"]{
+    color:blue;
+    letter-spacing: 10px;
+}
+
+/* id selector */
+#idOne{
+    color:brown;
+
+}
+/* class selector */
+.classOne{
+    color:brown;
+    line-height: 30px;
+    text-indent: 40px;
+    text-transform: capitalize;
+    word-spacing:10px;
+
+}
+
+/* descendent selector */
+.desc a{
+    color:red;
+    text-decoration: none;
+}
+
+/* Child selector */
+.child > a{
+    color:green;
+}
