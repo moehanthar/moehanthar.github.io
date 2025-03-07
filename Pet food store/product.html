@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Food Cards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background:#e65c00 ;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+        }
+        .card {
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            background: #fff;
+            padding: 15px;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .card h2 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .card p {
+            font-size: 18px;
+            color: #ff6600;
+            font-weight: bold;
+        }
+        .card button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            background: #ff6600;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .card button:hover {
+            background: #e65c00;
+        }
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="pet-food1.jpg" alt="Pet Food">
+            <h2>Premium Dog Food</h2>
+            <p>$19.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="pet-food2.jpg" alt="Pet Food">
+            <h2>Healthy Cat Food</h2>
+            <p>$15.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="pet-food3.jpg" alt="Pet Food">
+            <h2>Organic Bird Seeds</h2>
+            <p>$12.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="pet-food4.jpg" alt="Pet Food">
+            <h2>Rabbit Pellets</h2>
+            <p>$9.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="pet-food5.jpg" alt="Pet Food">
+            <h2>Fish Flakes</h2>
+            <p>$7.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="pet-food6.jpg" alt="Pet Food">
+            <h2>Turtle Food</h2>
+            <p>$8.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+            <h2>Hamster Mix</h2>
+            <p>$6.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="pet-food8.jpg" alt="Pet Food">
+            <h2>Guinea Pig Food</h2>
+            <p>$10.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="pet-food6.jpg" alt="Pet Food">
+            <h2>Turtle Food</h2>
+            <p>$8.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+            <h2>Hamster Mix</h2>
+            <p>$6.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="pet-food8.jpg" alt="Pet Food">
+            <h2>Guinea Pig Food</h2>
+            <p>$10.99</p>
+            <button>Shop Now</button>
+        </div>
+        <div class="card">
+            <img src="pet-food8.jpg" alt="Pet Food">
+            <h2>Guinea Pig Food</h2>
+            <p>$10.99</p>
+            <button>Shop Now</button>
+        </div>
+
+    </div>
+</body>
+</html>
