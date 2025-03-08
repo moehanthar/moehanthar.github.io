@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+VN:wght@100..400&family=Poppins:wght@200;400;500;600;700;800;900&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+           
+            .container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                padding: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+    
+            .card {
+                width: 100%;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                background: #fff;
+                padding: 15px;
+            }
+    
+            .card img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+    
+            .card h2 {
+                font-size: 20px;
+                margin: 10px 0;
+            }
+    
+            .card p {
+                font-size: 18px;
+                color: #ff6600;
+                font-weight: bold;
+            }
+    
+            .card button {
+                margin-top: 10px;
+                padding: 10px 15px;
+                border: none;
+                background: #ff6600;
+                color: white;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+    
+            .card button:hover {
+                background: #e65c00;
+            }
+    
+            /* Navbar Styles */
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 30px;
+                height: 80px;
+                background-color: #eefaa9;
+            }
+    
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+                padding: 0;
+                color: #222;
+            }
+    
+            .nav-links li {
+                display: inline;
+            }
+    
+            .nav-links a {
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+                font-size: 18px;
+            }
+    
+            .nav-links a:hover {
+                color: #f1c40f;
+            }
+    
+            .nav-icons {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+    
+            .nav-icons input {
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+    
+            .nav-icons img {
+                height: 30px;
+                cursor: pointer;
+            }
+    
+            .logo img {
+                height: 160px;
+                width: 180px;
+                object-fit: contain;
+            }
+    
+            
+    
+            /* Media Queries */
+            @media (max-width: 1024px) {
+                .container {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+    
+            @media (max-width: 600px) {
+                .container {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+    
+            /* Body Flexbox */
+            .flex-body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background: #e65c00;
+            }
+            footer {
+                background-color: #222;
+                color: white;
+                padding: 40px 0;
+                text-align: center;
+                border-radius: 40px 0 0 0;
+            }
+            
+            .footer-container {
+                max-width: 1200px;
+                margin: auto;
+                padding: 20px;
+                
+            }
+            
+            .footer-logo img {
+                width: 200px;
+                margin-bottom: 20px;
+                margin-right:100px
+            }
+            
+            .footer-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                text-align: left;
+                gap: 20px;
+            }
+            
+            
+       
