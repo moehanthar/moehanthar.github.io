@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Food Cards</title>
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style>
+        * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+                text-decoration:none;
+            }
+           
+            .container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                padding: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+    
+            .card {
+                width: 100%;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                text-align: center;
+                background: #fff;
+                padding: 15px;
+            }
+    
+            .card img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+    
+            .card h2 {
+                font-size: 20px;
+                margin: 10px 0;
+            }
+    
+            .card p {
+                font-size: 18px;
+                color: #ff6600;
+                font-weight: bold;
+            }
+    
+            .card button {
+                margin-top: 10px;
+                padding: 10px 15px;
+                border: none;
+                background: #ff6600;
+                color: white;
+                font-size: 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+    
+            .card button:hover {
+                background: #e65c00;
+            }
+    
+            /* Navbar Styles */
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 30px;
+                height: 80px;
+                background-color: #eefaa9;
+            }
+    
+            .nav-links {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+                padding: 0;
+                color: #222;
+            }
+    
+            .nav-links li {
+                display: inline;
+            }
+    
+            .nav-links a {
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+                font-size: 18px;
+            }
+    
+            .nav-links a:hover {
+                color: #f1c40f;
+            }
+    
+            .nav-icons {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+    
+            .nav-icons input {
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+    
+            .nav-icons img {
+                height: 30px;
+                cursor: pointer;
+            }
+    
+            .logo img {
+                height: 160px;
+                width: 180px;
+                object-fit: contain;
+            }
+   
+            .flex-body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background: #e65c00;
+            }
+            footer {
+                background-color: #222;
+                color: white;
+                padding: 40px 0;
+                text-align: center;
+                border-radius: 40px 0 0 0;
+            }
+            
+            .footer-container {
+                max-width: 1200px;
+                margin: auto;
+                padding: 20px;
+                
+            }
+            
+            .footer-logo img {
+                width: 200px;
+                margin-bottom: 20px;
+                margin-right:100px
+            }
+            
+            .footer-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                text-align: left;
+                gap: 20px;
+            }
+            
+   </style>
+    
+</head>
+<body>
+        <div class="flex-body">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="image/logo.jpg" alt="Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Food</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search...">
+                    <i class='bx bx-user'></i>
+                    <i class='bx bx-shopping-bag'></i>
+                </div>
+            </nav>
+    
+            <!-- Pet Food Cards Container -->
+            <div class="container">
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Premium Dog Food</h2>
+                    <p>$19.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Healthy Cat Food</h2>
+                    <p>$15.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Organic Bird Seeds</h2>
+                    <p>$12.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Rabbit Pellets</h2>
+                    <p>$9.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Fish Flakes</h2>
+                    <p>$7.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Turtle Food</h2>
+                    <p>$8.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Hamster Mix</h2>
+                    <p>$6.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Guinea Pig Food</h2>
+                    <p>$10.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Turtle Food</h2>
+                    <p>$8.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Hamster Mix</h2>
+                    <p>$6.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Guinea Pig Food</h2>
+                    <p>$10.99</p>
+                    <button>Shop Now</button>
+                </div>
+                <div class="card">
+                    <img src="image/discountr.png" alt="Pet Food" style="background-color: antiquewhite;">
+                    <h2>Guinea Pig Food</h2>
+                    <p>$10.99</p>
+                    <button>Shop Now</button>
+                </div>
+            </div>
+   
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <img src="image/logo.jpg" alt="Restaurant Logo">
+                </div>
+                
+                <!-- Quick Links Section -->
+                <div class="footer-links-container">
+                    <h3>Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Food</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Contact Us Section -->
+                <div class="footer-contact-container">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> Rhuddlan Rd, Abergele LL22 7HZ, United Kingdom</li>
+                        <li><i class="fas fa-phone"></i> +441745823188</li>
+                        <li><i class="fas fa-envelope"></i> kittylove@gmail.com</li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media Section -->
+                <div class="footer-social-container" style="margin-left:90px;">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="social-icon"><i class='bx bxl-tiktok' ></i></a>
+                        <a href="#" class="social-icon"><i class='bx bxl-telegram' ></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

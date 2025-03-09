@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('image/login.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            display: flex;
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 700px;
+            overflow: hidden;
+        }
+        .logo-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eefaa9;
+            padding: 20px;
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        .login-container {
+            flex: 1;
+            padding: 50px;
+        }
+        .login-container h2 {
+            text-align: center;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background: #218838;
+        }
+        .links {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .links a {
+            color: #28a745;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="image/logo.jpg" alt="Logo">
+        </div>
+        <div class="login-container">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="validateLogin()">Login</button>
+            <div class="links">
+                <a href="#">Forgot Password?</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+            <p id="error-message" style="color: red; text-align: center;"></p>
+        </div>
+    </div>
+
+</body>
+</html>
