@@ -247,31 +247,31 @@ let products=[
     {id:31,
         name:'Size-M',
         image:'normal skin/ShanClothes/s1.png',
-        price:10500
+        price:120000
   },
   
   {id:32,
         name:'Size-M',
         image:'normal skin/ShanClothes/s2.png',
-        price:27500
+        price:130000
   },
   
   {id:33,
          name:'Size-M',
         image:'normal skin/ShanClothes/s3.png',
-        price:5000
+        price:120000
   },
   
   {id:34,
           name:'Size-M',
         image:'normal skin/ShanClothes/s4.png',
-        price:13000
+        price:110000
   },
   
   {id:35,
           name:'Size-M',
         image:'normal skin/ShanClothes/s51.png',
-        price:60000
+        price:120000
   },
   
   
@@ -279,81 +279,81 @@ let products=[
   {id:36,
          name:'Size-M',
         image:'normal skin/ShanClothes/s52.png',
-        price:18200
+        price:130000
   },
   
   {id:37,
           name:'Size-M',
         image:'normal skin/ShanClothes/s7.png',
-        price:42000
+        price:140000
   },
   
   {id:38,
          name:'Size-M',
         image:'normal skin/ShanClothes/s8.png',
-        price: 23500
+        price: 90000
   },
   
   {id:39,
    name:'Size-M',
         image:'normal skin/ShanClothes/s9.png',
-        price:25000
+        price:70000
   },
   
   {id:40,
         name:'Size-M',
         image:'normal skin/ShanClothes/ss55.png',
-        price:10000
+        price:70000
   },
   
   
   {id:41,
         name:'Size-M',
         image:'normal skin/ShanClothes/ss3.png',
-        price:28000
+        price:70000
   },
   
   {id:42,
          name:'Size-M',
         image:'normal skin/ShanClothes/ss5.png',
-        price:26000
+        price:80000
   },
   
   {id:43,
    name:'Size-M',
         image:'normal skin/ShanClothes/ss6.png',
-        price:108000
+        price:80000
   },
   
   {id:44,
      name:'Size-M',
         image:'normal skin/ShanClothes/ss7.png',
-        price:96000
+        price:70000
   },
   
   {id:45,
           name:'Size-M',
         image:'normal skin/ShanClothes/sc1.png',
-        price:28000
+        price:70000
   },
   
   
   {id:46,
         name:'Size-M',
         image:'normal skin/ShanClothes/ss8.png',
-        price:33500
+        price:70000
   },
   
   {id:47,
          name:'Size-M',
         image:'normal skin/ShanClothes/ss9.png',
-        price: 9500
+        price: 70000
   },
   
   {id:48,
      name:'Size-M',
         image:'normal skin/ShanClothes/ss12.png',
-        price:29000
+        price:70000
   },
   
   {id:49,
@@ -926,124 +926,124 @@ let products=[
     price:20000
 },
 {id:154,
-     name:'Earings',
+     name:'Dragon Bracelet',
     image:'accessories/a44.png',
-    price:2500
+    price:20000
 
 },
 {id:155,
     name:'Earings',
     image:'accessories/a4.png',
-    price:3000
+    price:15000
 },
 {id:156,
    name:'Earings',
     image:'accessories/a5.png',
-    price:2000
+    price:15000
 },
 {id:157,
-    name:'Size-M',
+    name:'Earings',
     image:'accessories/a6.png',
-    price:2500
+    price:15000
 
 },
 {id:158,
-   name:'Size-M',
+   name:'Bracelet',
     image:'accessories/a20.png',
     price:2000
 },
 {id:159,
-   name:'Size-M',
+   name:'Bracelet',
     image:'accessories/a21.png',
     price:3000
 },
 {id:160,
-    name:'Size-M',
+    name:'Bracelet',
     image:'accessories/a22.png',
     price:2500
 
 },
 {id:161,
- name:'Size-M',
+ name:'Shan Clock',
     image:'accessories/a15.png',
-    price:2000
+    price:60000
 },
 {id:162,
-   name:'Size-M',
+   name:'Shan Clock',
     image:'accessories/a16.png',
-    price:2000
+    price:60000
 },
 {id:163,
-    name:'Size-M',
+    name:'Shan Clock',
     image:'accessories/a17.png',
-    price:2500
+    price:60000
 
 },
 {id:164,
- name:'Size-M',
+ name:'Shan Belt',
     image:'accessories/a18.png',
-    price:2000
+    price:15000
 },
 {id:165,
-    name:'Size-M',
+    name:'Dragon Hairpin',
     image:'accessories/a19.png',
-    price:3000
+    price:13000
 },
 {id:166,
-   name:'Size-M',
+   name:'Shan Bag',
     image:'accessories/a10.png',
-    price:2500
+    price:40000
 
 },
 {id:167,
-    name:'Size-M',
+    name:'Shan Bag',
     image:'accessories/a11.png',
-    price:2000
+    price:40000
 },
 {id:168,
-    name:'Size-M',
+    name:'Shan Bag',
     image:'accessories/a13.png',
-    price:2000
+    price:40000
 },
 {id:169,
-    name:'Size-M',
+    name:'Shan Bag',
     image:'accessories/a14.png',
-    price:2500
+    price:40000
 
 },
 {id:170,
-    name:'Size-M',
+    name:'Shan Bag',
     image:'accessories/a20.jpg',
-    price:2000
+    price:40000
 },
 {id:171,
-    name:'Size-M',
+    name:'Shan Bag',
     image:'accessories/a21.jpg',
-    price:2000
+    price:40000
 },
 {id:172,
-     name:'Size-M',
+     name:'Shan Bag',
     image:'accessories/a22.jpg',
-    price:2500
+    price:40000
 
 },
 {id:173,
-      name:'Size-M',
+      name:'Shan Bag',
     image:'accessories/a23.jpg',
-    price:2000
+    price:40000
 },
 {id:174,
-       name:'Size-M',
+       name:'Shan Bag',
     image:'accessories/a24.jpg',
     price:2000
 },
 {id:175,
-   name:'Size-M',
+   name:'Shan Bag',
     image:'accessories/a25.jpg',
     price:3000
 },
 {id:176,
-   name:'Size-M',
+   name:'Shan Bag',
     image:'accessories/',
     price:30000
 },
