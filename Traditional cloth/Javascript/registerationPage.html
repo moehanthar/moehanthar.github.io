@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+       #error {
+        position: absolute;
+        color: red;
+        bottom: 0;
+        transition: opacity 0.5s; /* Add a smooth fade effect */
+        opacity: 1; /* Initially hide the error message */
+    }
+
+    .error {
+        color: red;
+        font-size: 1.2em;
+        transition: opacity 0.5s; /* Add a smooth fade effect */
+        opacity: 1; /* Initially hide the error message */
+    }
+
+    #phone_error {
+        position: absolute;
+        color: red;
+        bottom: 0;
+        transition: opacity 0.5s; /* Add a smooth fade effect */
+        opacity: 1; /* Initially hide the error message */
+    }
+
+    </style>
+</head>
+<body>
+   
+        
+    <form>
+        <div class="container">
+            <div class="login_box">
+                <h1>Registration</h1>
+
+                <div class="input_box">
+                    <div id="email_error" class="error"></div>
+                    <input type="email" id="email" required="">
+                    <label for="">Email</label>
+                    <ion-icon class="icon" name="call-outline"></ion-icon>
+                </div>
+
+             
+
+                <div class="input_box">
+                    <input type="text" id="name" required="">
+                    <label for="">name</label>
+                    <ion-icon class="icon" name="call-outline"></ion-icon>
+                </div>
+                <div class="input_box">
+                    <div id="phone_error" class="error"></div>
+                    <input type="text" id="phone" required="">
+                   
+                    <label for="">phone</label>
+                    <ion-icon class="icon" name="call-outline"></ion-icon>
+                </div>
+
+                <div class="input_box">
+                    <input type="text" id="address" required="">
+                    <label>address</label>
+                    <ion-icon class="icon" name="mail-outline"></ion-icon>
+                </div>
+
+                <div class="input_box">
+                    <input type="password" id="password" minlength="8" required="">
+                    <label for="">Password</label>
+                </div>
+
+                <div class="input_box">
+                    <div id="error" class="error"></div>
+                    <input type="password" id="confirm_password" minlength="8" required="">  
+                    <label for="">Confirm Password</label>
+                </div>
+
+                
+
+                <div class="login">
+                    <input type="button" value="Sign Up" onclick="fun()" class="button">
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        function fun() {
+           
+            
+            // Regular expression for a valid phone number (11 digits)
+            var phoneRegex = /^[0-9]{11}$/;
+            
+            // Regular expression for a valid email address
+         
+            var phoneInput = document.getElementById("phone");
+
+            
+            // Clear any previous error messages
+            var email = document.getElementById("email").value;
+            var passwordInput = document.getElementById("password");
+    var confirmPasswordInput = document.getElementById("confirm_password");
+    var errorDiv = document.getElementById("error");
+
+    var pw = passwordInput.value;
+    var cpw = confirmPasswordInput.value;
+           
+            
+            
+            if (pw === cpw) {
+                sessionStorage.setItem("email", email);
+                sessionStorage.setItem("pw", pw);
+                window.location.href = "login.html";
+            } else {
+                errorDiv.textContent = "Please Check Your password";
+        confirmPasswordInput.value = ""; // Clear the confirm password field
+        confirmPasswordInput.focus(); 
+        setTimeout(function () {
+            errorDiv.textContent = "";
+        }, 2000);
+            }
+        
+            var username = document.getElementById("name").value;
+            var phone = phoneInput.value;
+            var address = document.getElementById("address").value;
+            var errph=document.getElementById("phone_error");
+          
+        
+            if (!phone.match(phoneRegex)) {
+                errph.textContent = "Invalid Phone Number";
+                phoneInput.value = " "; 
+               
+                setTimeout(function () {
+            errph.textContent = "";
+        }, 2000);}
+
+
+
+
+
+        
+          
+            sessionStorage.setItem("username", username);
+            sessionStorage.setItem("phone", phone);
+            sessionStorage.setItem("address", address);
+        }
+        </script>
+        
+</body>
+</html>

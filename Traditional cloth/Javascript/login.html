@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+           #error {
+        position: absolute;
+        font-size: 1.2em;
+        color: red;
+        bottom: 0;
+        transition: opacity 0.5s; /* Add a smooth fade effect */
+        opacity: 1; /* Initially hide the error message */
+    }
+
+    .error {
+        color: red;
+        font-size: 1.2em;
+        transition: opacity 0.5s; /* Add a smooth fade effect */
+        opacity: 1; /* Initially hide the error message */
+    }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <script>
+    function fun(){
+        var emailinput=document.getElementById("email");
+        var pwinput=document.getElementById("pw");
+        var email=emailinput.value;
+        var pw=pwinput.value;
+       var em=sessionStorage.getItem("email");
+       var pass=sessionStorage.getItem("pw");
+      
+       var errorDiv = document.getElementById("error");
+       
+       if(email==em && pw==pass)
+       {
+        window.location.href="OilyPage.html";
+       }
+       else{
+     
+        errorDiv.textContent = "password do not match!";
+        pwinput.focus(); 
+        pwinput.value = "";
+        setTimeout(function () {
+            errorDiv.textContent = "";
+        }, 2000);
+       }
+    
+     
+       
+
+    }</script>
+    <div class="container">
+        <div class="login_box">
+            <h1>Login</h1>
+            <div class="input_box">
+             
+                <input type="email" id="email" required="">
+                <label for="">Email</label>
+                <ion-icon class="icon " name="mail-outline"></ion-icon>
+            </div>
+            <div class="input_box">
+                <div id="error"></div>
+                <input type="password" id="pw" required="">
+                <label for="">password</label>
+                <!-- <ion-icon class="icon" name="lock-closed-outline"></ion-icon>
+                <span id="error" style="color: red;"></span> Add this line -->
+            </div>
+
+            <div class="rem">
+                <input id="chack" type="checkbox">
+                <label for="chack">remember me</label>
+                <a href="#">forget password</a>
+            </div>
+            <div class="login">
+                <button onclick="fun()">Log in </button>
+            </div>
+            <div>
+                <div class="reg">
+                    <p>don't have a account </p>
+                    <a href="registerationPage.html">registration</a>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+    
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

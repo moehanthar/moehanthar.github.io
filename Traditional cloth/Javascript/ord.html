@@ -1,0 +1,452 @@
+
+
+<html>
+    <head>
+
+        <style>
+* {
+  font-family: sans-serif; 
+
+
+}
+
+
+.content-table {
+    margin-right: 5%;
+  border-collapse: collapse;
+ 
+  
+  font-size: 0.9em;
+ 
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width:90%;
+}
+
+.content-table  .htable  {
+  background-color: #ccae0a;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+ 
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table  tr {
+  border-bottom: 1px solid #fbdb23;
+}
+
+.content-table tr:nth-of-type(even) {
+  background-color: #ecebe7;
+}
+
+.content-table tr:last-of-type {
+  border-bottom: 2px solid #c21e44;
+}
+
+.content-table  tr.active-row {
+  font-weight: bold;
+  color: #021c16;
+}
+
+
+
+/* image */
+
+.voucher-container {
+    width: 90%;
+            margin: 20px auto;
+            background-color: #100d0e;
+   
+            
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .voucher-header {
+          
+            font-size: 32px;
+            color: #333;
+          position: absolute;
+         top:100px;
+         left: 230px;
+            
+        }
+
+        .con{
+          display: flex;
+          justify-content: space-between;
+        }
+        .listname{
+         
+            margin-left:5%;
+           
+        }
+        .date {
+          display: inline-block;
+    margin-left: 100px; /* Move to the left */
+    margin-right: 5%; /* Add right margin for spacing */
+    text-align: right; /* Align the text to the right */
+    width: 50%; /* Set a width to limit the right positioning */
+}
+
+
+
+        img{
+  width:auto;
+  height: 200px;
+ 
+}
+body{
+  background-color: #ff97b0;
+
+}
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.par{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 1.8em;
+}
+.para{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 1.1em;
+}
+
+.home-button-container {
+            text-align: right;
+            margin-top: 30px;
+            margin-right: 80px;
+        }
+
+        .home-button {
+            background-color: #110c0d;
+            color: #ccae0a;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+
+
+
+      </style>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+       integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+       crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+
+        
+
+    </head>
+    <body>
+        <div class="voucher-container">
+        <div class="nav header-container">
+          <img src="logoimg.png" alt="">
+          <div class="voucher-header header-text">
+           
+         </div>
+         <div style="text-align: justify; color:#ccae0a; margin-right:60px;">
+          <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;<span>No(59)C MyineYadanar FirstFloor</span>
+         <br>
+         <i class="fa-solid fa-phone" style="color: #000000;"></i>&nbsp;&nbsp;&nbsp;<span>09674843974</span>
+          <br>
+          <i class="fa-solid fa-phone" style="color: #000000;"></i>&nbsp;&nbsp;&nbsp;<span>
+            05721190</span>
+        
+        
+        </div>
+        </div>
+           
+</div>
+
+
+
+<div class="con">
+
+<div class="listname">
+
+<p>   <i class="fa-solid fa-user" style="color: #000000;"></i>&nbsp;&nbsp;&nbsp;Name: <span id="usernameDisplay"></span></p>
+<p><i class="fa-solid fa-phone" style="color: #000000;"></i>&nbsp;&nbsp;&nbsp;Phone: <span id="phoneDisplay"></span></p>
+<p><i class="fa-solid fa-address-book" style="color: #000000;"></i>&nbsp;&nbsp;&nbsp;Address: <span id="addressDisplay"></span></p>
+
+</div>
+<div class="date">
+  <p>Date: <span id="dateDisplay"></span></p>
+</div>
+</div>  
+             
+        <script>
+
+function getQueryParam(name) {
+    var urlSearchParams = new URLSearchParams(window.location.search);
+    return urlSearchParams.get(name);
+}
+
+var dataArray=[];
+var encodedArray = getQueryParam("data");
+if (encodedArray) {
+    var decodedArray = decodeURIComponent(encodedArray);
+     dataArray = JSON.parse(decodedArray);
+   
+    // Now you have the array on this page
+}
+console.log(dataArray);
+
+
+
+
+
+
+var total=0;
+var discount=0;
+var totalamount=0;
+var i=1;
+var table=document.createElement("table");
+        table.border=1;
+         table.width="50%";
+         table.align="center";
+         table.className="content-table";
+   
+
+        var row1=document.createElement("tr");
+        row1.align="center";
+        row1.className="htable";
+        table.appendChild(row1);
+
+        var col1_1=document.createElement("th");
+       col1_1.appendChild(document.createTextNode("No"));
+       row1.appendChild(col1_1);
+
+
+       
+       var col1_5=document.createElement("th");
+       col1_5.appendChild(document.createTextNode("Item"));
+       row1.appendChild(col1_5);
+
+       var col2_1=document.createElement("th");
+       col2_1.appendChild(document.createTextNode("Qty"));
+       row1.appendChild(col2_1);
+
+
+       var col3_1=document.createElement("th");
+       col3_1.appendChild(document.createTextNode("Price"));
+       row1.appendChild(col3_1);
+
+       var col4_1=document.createElement("th");
+       col4_1.appendChild(document.createTextNode("Amount"));
+       row1.appendChild(col4_1);
+       document.body.appendChild(table);
+  dataArray.forEach((value, key)=>{
+totalamount=`${value.price}`/`${value.quantity}`;
+
+    var rows=document.createElement("tr");
+        rows.align="center";
+        rows.classList="active-row ";
+        table.appendChild(rows);
+
+
+        var col1=document.createElement("td");
+       col1.appendChild(document.createTextNode(i++));
+       rows.appendChild(col1);
+
+
+       var col5=document.createElement("td");
+       col5.appendChild(document.createTextNode(`${value.name}`));
+       rows.appendChild(col5);
+
+
+       var col2=document.createElement("td");
+       col2.appendChild(document.createTextNode(`${value.quantity}`));
+       rows.appendChild(col2);
+
+
+       var col3=document.createElement("td");
+       col3.appendChild(document.createTextNode(totalamount.toLocaleString()));
+       rows.appendChild(col3);
+
+    
+
+       var col4=document.createElement("td");
+       
+       col4.appendChild(document.createTextNode(`${value.price}`.toLocaleString()));
+       
+       rows.appendChild(col4 );
+console.log(value.price);
+
+total=total+value.price;
+
+console.log(total);
+
+
+
+
+  })  
+
+  if(total>=100000){
+    console.log(total);
+    discount=total*0.05;
+    total-=discount;
+    console.log(total);
+    console.log(discount);
+}
+
+
+
+
+
+
+
+
+
+
+var rows=document.createElement("tr");
+        rows.align="center";
+        
+        table.appendChild(rows);
+ var myimage=document.createElement("img");
+ 
+ myimage.src="kpay.jpg";
+ var p=document.createElement("p");
+
+ 
+ p.appendChild(document.createTextNode("Cash back with Kpay"));
+ p.className="para";
+ var p1=document.createElement("p");
+ p1.className="par";
+ p1.appendChild(document.createTextNode("Thank for your purchase..........."));
+
+        var col1=document.createElement("td");
+       col1.rowSpan="2";
+       col1.colSpan="2";
+      //  cols.colSpan="3";
+       col1.appendChild(p1);
+
+      rows.appendChild(col1);
+
+      
+      var cols=document.createElement("td");
+      cols.rowSpan="2";
+      
+      cols.appendChild(myimage);
+      cols.appendChild(p);
+      rows.appendChild(cols);
+
+        var cols=document.createElement("td");
+       
+        cols.align="center";
+       cols.appendChild(document.createTextNode("Discount"));
+       rows.appendChild(cols);
+
+        var cols=document.createElement("td");
+        cols.align="center";
+       cols.appendChild(document.createTextNode(discount.toLocaleString()));
+       rows.appendChild(cols);
+
+  var rows=document.createElement("tr");
+        rows.align="center";
+        table.appendChild(rows);
+
+        var cols=document.createElement("td");
+       
+        cols.align="center";
+       cols.appendChild(document.createTextNode("Total Amount"));
+       rows.appendChild(cols);
+
+
+
+        var cols=document.createElement("td");
+     
+        cols.align="center";
+       cols.appendChild(document.createTextNode(total.toLocaleString()));
+       rows.appendChild(cols);
+
+
+        </script>
+    
+    <script>
+      // Retrieve data from session storage
+      var username = sessionStorage.getItem("username");
+      var phone = sessionStorage.getItem("phone");
+      var address = sessionStorage.getItem("address");
+      var date=new Date();
+      const year = date.getFullYear();
+const month = date.getMonth(); // Note: Month is zero-based (0-11)
+const day = date.getDate();
+const hours = date.getHours();
+const minutes = date.getMinutes();
+const seconds = date.getSeconds();
+const int=date.getDay();
+let type="";
+if(int==0)
+{
+  type="Sunday";
+}
+else if(int==1)
+{
+  type="Monday";
+}
+else if(int==2)
+{
+  type="Tuesday";
+}
+else if(int==3)
+{
+  type="Wednesday";
+}
+else if(int==4)
+{
+  type="Thursday";
+}
+else if(int==5)
+{
+  type="Friday";
+}
+else if(int==6)
+{
+  type="Saturday";
+}
+
+function addLeadingZero(value) {
+    return value < 10 ? "0" + value : value;
+}
+
+document.getElementById("dateDisplay").textContent = day + "." + (month + 1) + "." + year + " (" + type + ")";
+
+      
+      // Display user information on the order page
+      document.getElementById("usernameDisplay").textContent = username;
+      document.getElementById("phoneDisplay").textContent = phone;
+      document.getElementById("addressDisplay").textContent =  address;
+      </script>
+      
+    <div class="home-button-container">
+      <a href="HomePage.html"><button class="home-button">Home</button></a>
+    </div>
+
+    <div class="footer__rights" style="text-align: center;padding:20px;  background-color:  white;">
+      <p class="footer__copy" >&#169; 2023 Tiny Box of Beauty. All rigths reserved.</p>
+      <div class="footer__terms" >
+          <a href="#" class="footer__terms-link" style="text-decoration: none;">Terms & Agreements</a>
+          <a href="#" class="footer__terms-link" style="text-decoration: none;">Privacy Policy</a>
+      </div>
+    </div>
+           <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+    </body>
+</html>
