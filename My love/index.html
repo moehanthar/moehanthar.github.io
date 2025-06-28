@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Keypad Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      background: url('image.png') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(3px);
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 2rem;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .form-img {
+      max-width: 100%;
+      border-radius: 0.5rem;
+    }
+
+    .password-display {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      text-align: center;
+      letter-spacing: 0.5rem;
+      border: 1px solid #ced4da;
+      border-radius: 0.5rem;
+      background-color: #f8f9fa;
+      margin-bottom: 1rem;
+      height: 3rem;
+    }
+
+    .keypad {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .keypad button {
+      width: 60px;
+      height: 60px;
+      font-size: 1.25rem;
+      margin: 5px;
+    }
+
+    .btn-pink {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+    }
+
+    .btn-pink:hover {
+      background-color: #ff85c1;
+    }
+
+    @media (max-width: 768px) {
+      .row.flex-column-reverse {
+        flex-direction: column-reverse !important;
+      }
+
+      .keypad button {
+        width: 22%;
+        margin: 5px 1%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Sound Effect -->
+  <audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3" preload="auto"></audio>
+
+  <div class="d-flex align-items-center justify-content-center vh-100 px-3">
+    <div class="form-container">
+      <div class="row flex-md-row flex-column-reverse">
+        <!-- Left: Form -->
+        <div class="col-md-6">
+          <h4 class="mb-3 text-center text-md-start text-white">Enter Our Passcode</h4>
+          <form onsubmit="handleSubmit(event)">
+            <div class="password-display" id="passwordDisplay"></div>
+            <div class="keypad mb-3">
+              <button type="button" class="btn btn-outline-light" onclick="appendNumber('1')">1</button>
+              <button type="button" class="btn btn-outline-light" onclick="appendNumber('2')">2</button>
+              <button type="button" class="btn btn-outline-light" onclick="appendNumber('3')">3</button>
+              <button type="button" class="btn btn-outline-light" onclick="appendNumber('4')">4</button>
+              <button type="button" class="btn btn-outline-light" onclick="appendNumber('5')">5</button>
+              <button type="button" class="btn btn-outline-light" onclick="appendNumber('6')">6</button>
+              <button type="button" class="btn btn-outline-light" onclick="appendNumber('7')">7</button>
+              <button type="button" class="btn btn-outline-light" onclick="appendNumber('8')">8</button>
+              <button type="button" class="btn btn-outline-light" onclick="appendNumber('9')">9</button>
+              <button type="button" class="btn btn-outline-danger" onclick="deleteLast()">←</button>
+              <button type="button" class="btn btn-outline-light" onclick="appendNumber('0')">0</button>
+              <button type="button" class="btn btn-outline-warning" onclick="clearPassword()">C</button>
+            </div>
+            <button type="submit" class="btn btn-pink w-100 mt-3">Login</button>
+          </form>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="col-md-6 d-flex justify-content-center align-items-center mb-4 mb-md-0">
+          <img src="form.png" class="form-img" alt="Login Illustration" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let passwordValue = '';
+    const correctPassword = '3725';
+
+    function playClickSound() {
+      document.getElementById('clickSound').play();
+    }
+
+    function appendNumber(num) {
+      if (passwordValue.length < 12) {
+        passwordValue += num;
+        updateDisplay();
+        playClickSound();
+      }
+    }
+
+    function deleteLast() {
+      passwordValue = passwordValue.slice(0, -1);
+      updateDisplay();
+      playClickSound();
+    }
+
+    function clearPassword() {
+      passwordValue = '';
+      updateDisplay();
+      playClickSound();
+    }
+
+    function updateDisplay() {
+      document.getElementById('passwordDisplay').textContent = '❤️'.repeat(passwordValue.length);
+    }
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      if (passwordValue === correctPassword) {
+        alert("✅ Correct passcode! Welcome!");
+      } else {
+        alert("❌ Incorrect passcode. Try again.");
+        clearPassword();
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
